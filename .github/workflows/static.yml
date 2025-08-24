@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ubiquitous Radicals</title>
+  <meta name="description" content="Mathematics 9" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<header class="page-header">
+  <h1 class="calligraphy">Ubiquitous Radicals</h1>
+  <h2>Performance Task in Mathematics 9</h2>
+  <p>Group 5 - 9-4 Fortitude</p>
+</header>
+<style>
+<!-- Fonts & Styles -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+  }
+
+  .page-header {
+    text-align: center;
+    color: white;
+    padding: 30px 0 20px 0;
+    background-color: #121212;
+  }
+
+  .page-header h1.calligraphy {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    margin: 0;
+  }
+
+  .page-header h2 {
+    font-size: 1.5em;
+    margin: 10px 0 5px 0;
+    font-weight: normal;
+  }
+
+  .page-header p {
+    font-size: 1.2em;
+    margin: 0;
+    font-style: italic;
+  }
+</style>
+          
+<!-- Table of Contents -->
+<table class="toc">
+  <tr>
+    <td><a href="#intro">Introduction</a></td>
+    <td><a href="#history">History of Radicals</a></td>
+    <td><a href="#laws-exp">Laws of Exponents</a></td>
+    <td><a href="#chapter2">Introduction to Radicals</a></td>
+    <td><a href="#chapter3">Laws of Radicals</a></td>
+  </tr>
+  <tr>
+    <td><a href="#chapter4">Simplifying Radicals</a></td>
+    <td><a href="#chapter5">Operations on Radicals</a></td>
+    <td><a href="#reflecton">Reflection</a></td>
+    <td><a href="#appendices">Appendices</a></td>
+  </tr>
+</table>
+
+<style>
+  body {
+    margin: 0; 
+    padding: 0;
+    background-color: #121212; 
+    font-family: Arial, sans-serif;
+  }
+
+  .toc {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 0; 
+    padding: 0;
+  }
+
+  .toc td {
+    text-align: center;
+    padding: 12px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .toc a {
+    color: white; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .toc a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+</style>
+
+   
+          <script>
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".topnav a");
+        
+            window.addEventListener("scroll", () => {
+              let current = "";
+              sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (scrollY >= sectionTop) {
+                  current = section.getAttribute("id");
+                }
+              });
+              navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                  link.classList.add("active");
+                }
+              });
+            });
+          </script>
+        </body>
+        <style>
+
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        
+          html, body {
+            width: 100vw;
+            min-height: 100vh;
+            background: #0b1320;
+            color: white;
+            font-family: Arial, sans-serif;
+          }
+        
+
+          .main {
+            width: 100vw;
+            padding: 1rem;
+          }
+        
+
+          .grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 16px;
+            width: 100%;
+          }
+        
+
+          .panel {
+            background: #0b1320;
+            border: 1px solid rgba(148,163,184,.2);
+            border-radius: 12px;
+            padding: 16px;
+            width: auto;          /* adjusts to content width */
+            max-width: 100%;      /* but won’t overflow screen */
+            height: auto;         /* expands vertically as needed */
+          }
+        
+          /* ✅ Rulebox adapts */
+          .rulebox {
+            background: rgba(96,165,250,.15);
+            border: 1px solid rgba(125,211,252,.25);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            font-weight: 600;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            display: block;
+          }
+        
+          /* ✅ Card (collapsible) */
+          .card {
+            background: linear-gradient(180deg,#0f172a 0%, #0b1528 100%);
+            border: 1px solid rgba(148,163,184,.16);
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0,0,0,.35);
+            margin: 14px 0;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+          }
+        
+          .card > summary {
+            padding: 14px;
+            font-weight: 700;
+            cursor: pointer;
+          }
+        
+          /* ✅ Problem/solution text */
+          .problem { font-weight: 700; margin-bottom: 6px; }
+          .answer { color: #34d399; font-weight: 700; margin: 6px 0; }
+          .solution {
+            background: rgba(34,211,238,.08);
+            border-left: 3px solid #22d3ee;
+            padding: 8px;
+            margin: 6px 0;
+          }
+          .explanation { color: #9ca3af; font-style: italic; }
+        </style>
+        
+ <!-- Introduction -->
+ <section class="card" id="#intro">
+  <h1 id="intro">Introduction</h1>
+  <p>
+    A <em>radical</em> is a mathematical notation used to represent roots, most commonly square roots.
+    The radical symbol \(\sqrt{\phantom{a}}\) is placed over a number or expression (the <em>radicand</em>)
+    to indicate the root being taken. For example, \(\sqrt{9}\) represents the number whose square is \(9\).
+    Radicals extend beyond square roots to cube roots \(\sqrt[3]{\;}\) and higher-order roots, following the same
+    conceptual framework.
+ 
+<!-- History -->
+<section class="card" id="#history">
+  <h2 id="history">1.1 History of Radicals</h2>
+  <p class="muted">Just as we study the history of wars and major events to understand how the world has changed, we can also explore the history of the concept in Mathematics, such as radicals. These ideas have developed over time through the efforts of mathematicians who worked to solve challenging problems. Learning how radicals began and how their notation evolved can give us a more profound understanding of what they represent and how they function. Just as we study the history of wars and major events to understand how the world has changed, we can also look at the history of mathematical concepts such as radicals. Over the years, these ideas developed through the work of mathematicians who faced challenging problems and searched for better ways to express them in the simplest form. Learning how radicals began and how their notation evolved can help us understand more deeply what they represent and how they work.</p>
+</section>
+<section class="card" id="ancient">
+  <h3 id="ancient">1.1.1 Ancient Origins</h3>
+  <p>
+    The extraction of roots appears in Old Babylonian mathematics (c. 1900–1600 BCE),
+    where square-root tables were used for practical problems such as land measurement and inheritance.
+    Greek mathematicians, including Euclid, applied geometric reasoning that implicitly required square roots
+    (e.g., the diagonal of a square). In India, Brahmagupta (7th century CE) described algorithms for computing
+    square roots, laying groundwork for later symbolic notation.
+  </p>
+</section>
+<section class="card" id="medieval">
+  <h3 id="">1.1.2 Medieval Developments</h3>
+  <p>
+    During the Islamic Golden Age, scholars translated and expanded Greek works, formalizing algorithms for root
+    extraction and introducing early symbolic forms. European mathematicians, influenced by Arabic sources, applied
+    radicals in solving quadratic equations. The radical sign \(\sqrt{\phantom{a}}\) first appeared in print in Christoph
+    Rudolff’s <em>Die Coss</em> (1525).
+  </p>
+</section>
+<section class="card" id="modern">
+  <h3 id="modern">1.1.3 Modern Formalization</h3>
+  <p>
+    René Descartes (1637) introduced the vinculum (the horizontal bar) over the radicand, creating the modern form of
+    the symbol. In the 19th century, the definition of rational exponents established the equivalence between radicals
+    and fractional powers, \(\sqrt[n]{a}=a^{1/n}\), integrating them into algebra, calculus, and applied sciences.
+    Today, radicals are fundamental in solving polynomial equations, analyzing geometric relationships, and modeling
+    physical phenomena.
+  </p>
+</section>
+
+<!-- Importance -->
+<section class="card" id="importance">
+  <h2 id="importance">Importance of Radicals</h2>
+
+  <div class="panel">
+    <strong>1. Algebraic Simplification.</strong>
+    <p>Radicals provide a compact notation for roots, making expressions easier to manipulate and simplify.</p>
+  </div>
+
+  <div class="panel">
+    <strong>2. Equation Solving.</strong>
+    <p>
+      Many algebraic equations, including quadratics, yield solutions involving roots. The quadratic formula contains a square root that
+      determines the nature of the solutions:
+    </p>
+    <div class="rulebox">
+      \[
+        x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+      \]
+    </div>
+  </div>
+
+  <div class="panel">
+    <strong>3. Exact Representation of Irrationals.</strong>
+    <p>Numbers such as \(\sqrt{2}\) cannot be expressed exactly as fractions or terminating decimals; radicals allow precise representation.</p>
+  </div>
+
+  <div class="panel">
+    <strong>4. Geometric Applications.</strong>
+    <p>
+      Radicals appear in formulas for lengths, areas, and volumes. For a square with side length \(s\), the diagonal \(d\) is
+      \(d=s\sqrt{2}\).
+    </p>
+  </div>
+
+  <div class="panel">
+    <strong>5. Advanced Mathematics.</strong>
+    <p>
+      In calculus, radicals occur in functions, limits, derivatives, and integrals; in complex numbers, they express roots of negative numbers.
+    </p>
+  </div>
+
+  <div class="panel">
+    <strong>6. Scientific & Engineering Use.</strong>
+    <p>
+      Radicals are integral to formulas in physics, engineering, and other sciences (e.g., wave speed, energy levels, and material stress).
+    </p>
+  </div>
+</section>
+        
+      <section id="laws-exp" class="#laws-exp">
+        <h2>Laws of Exponents</h2>
+        <p class="muted"> Exponents are a shorthand for repeated multiplication. These rules make simplification fast and consistent. Understanding radicals begins with understanding exponents and the rules that define how they work.</p>
+
+          <details class="card" open>
+            <summary>Multiplication Rule</summary>
+          
+            <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+              If the bases are the same:
+              \(a^m \cdot a^n = a^{m+n}\).  
+              Keep the base (copy the variable), then add the exponents.
+            </div>
+          
+            <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+              <thead style="background:rgba(125,211,252,.25);">
+                <tr>
+                  <th>Problem: \(x^5 \cdot x^{11}\)</th>
+                  <th>Problem: \(3y^4 \cdot 6y^7\)</th>
+                  <th>Problem: \(2z^{13} \cdot 5z^{15}\)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ol style="margin:0 0 8px 16px; padding:0;">
+                      <li><b>Identify same base</b>: both terms have base \(x\).</li>
+                      <li><b>Copy the variable</b>: keep \(x\).</li>
+                      <li><b>Add exponents</b>: \(5 + 11 = 16\), so \(x^5 \cdot x^{11} = x^{16}\).</li>
+                    </ol>
+                  </td>
+                  <td>
+                    <ol style="margin:0 0 8px 16px; padding:0;">
+                      <li><b>Separate numbers and variables</b>: \((3\cdot6)\,(y^4 \cdot y^7)\).</li>
+                      <li><b>Multiply coefficients</b>: \(3\cdot6 = 18\).</li>
+                      <li><b>Copy the variable and add exponents</b>: \(y^{4+7} = y^{11}\).</li>
+                      <li><b>Combine</b>: \(18 \cdot y^{11} = 18y^{11}\).</li></li>
+                    </ol>
+                  </td>
+                  <td>
+                    <ol style="margin:0 0 8px 16px; padding:0;">
+                      <li><b>Separate numbers and variables</b>: \((2\cdot5)\,(z^{13} \cdot z^{15})\).</li>
+                      <li><b>Multiply coefficients</b>: \(2\cdot5 = 10\).</li>
+                      <li><b>Copy the variable and add exponents</b>: \(z^{13+15} = z^{28}\).</li>
+                      <li><b>Combine</b>: \(10 \cdot z^{28} = 10z^{28}\).</li>
+                    </ol>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+                    Final Answer: \(x^{16}\)
+                  </td>
+                  <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+                    Final Answer: \(18y^{11}\)
+                  </td>
+                  <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+                    Final Answer: \(10z^{28}\)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+          
+        <!-- Division Rule -->
+ <!-- Division Rule -->
+<details class="card" open>
+  <summary>2. Division Rule</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    If the bases are the same:
+    \(\dfrac{a^m}{a^n} = a^{m-n}\), \(a \neq 0\).  
+    Keep the base (copy the variable), then subtract the exponents.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \(\dfrac{x^{19}}{x^7}\)</th>
+        <th>Problem: \(\dfrac{15y^{12}}{3y^4}\)</th>
+        <th>Problem: \(\dfrac{24z^{25}}{8z^{11}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li><b>Identify same base</b>: both terms have base \(x\).</li>
+            <li><b>Copy the variable</b>: keep \(x\).</li>
+            <li><b>Subtract exponents</b>: \(19 - 7 = 12\), so \(x^{19} \div x^7 = x^{12}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li><b>Separate coefficients and variables</b>: \((15 \div 3)\,(y^{12} \div y^{4})\).</li>
+            <li><b>Divide coefficients</b>: \(15 \div 3 = 5\).</li>
+            <li><b>Copy the variable and subtract exponents</b>: \(y^{12-4} = y^{8}\).</li>
+            <li><b>Combine</b>: \(5y^{8}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li><b>Separate coefficients and variables</b>: \((24 \div 8)\,(z^{25} \div z^{11})\).</li>
+            <li><b>Divide coefficients</b>: \(24 \div 8 = 3\).</li>
+            <li><b>Copy the variable and subtract exponents</b>: \(z^{25-11} = z^{14}\).</li>
+            <li><b>Combine</b>: \(3z^{14}\).</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(x^{12}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(5y^{8}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(3z^{14}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+<!-- Power of a Power -->
+<details class="card" open>
+  <summary>3. Power of a Power</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    If you raise a power to another power:
+    \((a^m)^n = a^{m \cdot n}\).  
+    Keep the base, multiply the exponents.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \((v^6)^2\)</th>
+        <th>Problem: \((w)^8\)</th>
+        <th>Problem: \((o^5)^6\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>The base is \(v\). It already has an exponent of 6, and we raise it again to the 2nd power.</li>
+            <li>Multiply the exponents: \(6 \cdot 2 = 12\).</li>
+            <li>Result: \(v^{12}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>The base is \(w\). Since it has no visible exponent, it’s really \(w^1\).</li>
+            <li>Now raise it to the 8th power: \(1 \cdot 8 = 8\).</li>
+            <li>Result: \(w^8\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>The base is \(o\). Its exponent is 5, and the whole thing is raised to the 6th power.</li>
+            <li>Multiply exponents: \(5 \cdot 6 = 30\).</li>
+            <li>Result: \(o^{30}\).</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(v^{12}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(w^{8}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(o^{30}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Power of a Product -->
+<details class="card" open>
+  <summary>4. Power of a Product</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    When raising a product to a power:
+    \((ab)^n = a^n \cdot b^n\).  
+    Apply the exponent to each factor separately.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \((a^5 j^6)^5\)</th>
+        <th>Problem: \((jl^{14})^4\)</th>
+        <th>Problem: \((d^9 g^7)^3\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Distribute the outer exponent 5 to each factor inside.</li>
+            <li>For \(a^5\): \(5 \cdot 5 = 25\), so \(a^{25}\).</li>
+            <li>For \(j^6\): \(6 \cdot 5 = 30\), so \(j^{30}\).</li>
+            <li>Result: \(a^{25}j^{30}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Each factor gets raised to the 4th power.</li>
+            <li>For \(j\): \(1 \cdot 4 = 4\), so \(j^4\).</li>
+            <li>For \(l^{14}\): \(14 \cdot 4 = 56\), so \(l^{56}\).</li>
+            <li>Result: \(j^{4}l^{56}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Raise both factors to the 3rd power.</li>
+            <li>For \(d^9\): \(9 \cdot 3 = 27\), so \(d^{27}\).</li>
+            <li>For \(g^7\): \(7 \cdot 3 = 21\), so \(g^{21}\).</li>
+            <li>Result: \(d^{27}g^{21}\).</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(a^{25}j^{30}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(j^{4}l^{56}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(d^{27}g^{21}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Power of a Fraction -->
+<details class="card" open>
+  <summary>5. Power of a Fraction</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \(\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n},\ b \neq 0\)  
+    Apply the exponent to both the numerator and the denominator.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \(\left(\dfrac{yz^{13}}{x^4}\right)^2\)</th>
+        <th>Problem: \(\left(\dfrac{a^3 c^9}{j^5 q^{10}}\right)^4\)</th>
+        <th>Problem: \(\left(\dfrac{c^8 b}{r^6 s^7}\right)^6\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Each part of the fraction gets squared.</li>
+            <li>Numerator: \(y^1\) becomes \(y^{1 \cdot 2} = y^2\), and \(z^{13}\) becomes \(z^{26}\).</li>
+            <li>Denominator: \(x^4\) becomes \(x^8\).</li>
+            <li>Result: \(\dfrac{y^2 z^{26}}{x^8}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Raise both numerator and denominator to the 4th power.</li>
+            <li>Numerator: \(a^3 \to a^{12}\), \(c^9 \to c^{36}\).</li>
+            <li>Denominator: \(j^5 \to j^{20}\), \(q^{10} \to q^{40}\).</li>
+            <li>Result: \(\dfrac{a^{12} c^{36}}{j^{20} q^{40}}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Distribute the 6th power across numerator and denominator.</li>
+            <li>Numerator: \(c^8 \to c^{48}\), \(b^1 \to b^6\).</li>
+            <li>Denominator: \(r^6 \to r^{36}\), \(s^7 \to s^{42}\).</li>
+            <li>Result: \(\dfrac{c^{48} b^6}{r^{36} s^{42}}\).</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(\dfrac{y^2 z^{26}}{x^8}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(\dfrac{a^{12} c^{36}}{j^{20} q^{40}}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(\dfrac{c^{48} b^{6}}{r^{36} s^{42}}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Zero Exponent -->
+<details class="card" open>
+  <summary>6. Zero Exponent </summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \(a^0 = 1\) for \(a \neq 0\)  
+    Any nonzero number raised to the zero power equals 1.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \(7^0\)</th>
+        <th>Problem: \(4x^0\)</th>
+        <th>Problem: \(196^0\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Any nonzero number to the zero power is 1.</li>
+            <li>Result: \(1\)</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>\(x^0 = 1\)</li>
+            <li>Multiply by 4: \(4 \times 1 = 4\)</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Apply zero exponent rule: \(196^0 = 1\)</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(1\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(4\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(1\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+<!-- Negative Exponent -->
+<details class="card" open>
+  <summary>7. Negative Exponent</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \(a^{-n} = \dfrac{1}{a^n}\) for \(a \neq 0\).  
+    A negative exponent means take the reciprocal of the base and make the exponent positive.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \(27^{-3}\)</th>
+        <th>Problem: \(36^{-5}\)</th>
+        <th>Problem: \(49^{-7}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>The exponent is negative, so move the base to the denominator: \(\dfrac{1}{27^3}\).</li>
+            <li>Now compute \(27^3 = 19683\).</li>
+            <li>Final simplified result: \(\dfrac{1}{19683}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>The exponent is negative, so rewrite as the reciprocal: \(\dfrac{1}{36^5}\).</li>
+            <li>Next, evaluate the denominator: \(36^5 = 60,466,176\).</li>
+            <li>So the result is \(\dfrac{1}{60,466,176}\).</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>A negative exponent means reciprocal: \(\dfrac{1}{49^7}\).</li>
+            <li>Then calculate \(49^7 = 678,223,072,849\).</li>
+            <li>Therefore, the result is \(\dfrac{1}{678,223,072,849}\).</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(\dfrac{1}{19683}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(\dfrac{1}{60,466,176}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(\dfrac{1}{678,223,072,849}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Fractional Exponent -->
+<details class="card" open>
+  <summary>8. Fractional Exponent</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \(a^{\tfrac{p}{q}} = \sqrt[q]{a^p} = \left(\sqrt[q]{a}\right)^p\) (assume \(a \ge 0\) for real roots)  
+    The denominator \(q\) indicates the root; the numerator \(p\) indicates the power.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:left; font-family:Arial, sans-serif;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \(b^{\tfrac{3}{4}}\)</th>
+        <th>Problem: \(m^{\tfrac{9}{10}}\)</th>
+        <th>Problem: \(d^{\tfrac{12}{17}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Denominator \(4\) → 4th root</li>
+            <li>Numerator \(3\) → cube the base inside</li>
+            <li>Result: \(\sqrt[4]{b^3}\)</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Denominator \(10\) → 10th root</li>
+            <li>Numerator \(9\) → raise inside to \(m^9\)</li>
+            <li>Result: \(\sqrt[10]{m^9}\)</li>
+          </ol>
+        </td>
+        <td>
+          <ol style="margin:0 0 8px 16px; padding:0;">
+            <li>Denominator \(17\) → 17th root</li>
+            <li>Numerator \(12\) → power \(d^{12}\) inside</li>
+            <li>Result: \(\sqrt[17]{d^{12}}\)</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(\sqrt[4]{b^3}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(\sqrt[10]{m^9}\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(\sqrt[17]{d^{12}}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+
+      <!-- INTRODUCTION TO RADICALS (history etc.) -->
+
+      <section id="chapter2" class="#chapter2">
+        <h2>Introduction to Radicals</h2>
+        <div class="two">
+          <div class="panel">
+            <h3>Definition</h3>
+            <p>
+              A <em>radical</em> represents a root. It is written as 
+              \(\sqrt[n]{a}\), where \(n\) is the <em>index</em> that specifies which root is being taken, and the value under the radical sign, \(a\), is called the <em>radicand</em>.
+              </p>              
+            <h3>Principal & Negative Roots</h3>
+            <ul>
+              <li><strong>Principal root</strong> is the non-negative root (e.g., \(\sqrt{9}=3\)).</li>
+              <li>The negative root is the opposite: \(-\sqrt{9}=-3\).</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Brief History</h3>
+            <ul>
+              <li><strong>Babylonian & Greek</strong>: square-root tables; geometry required roots (e.g., diagonal of a square).</li>
+              <li><strong>India</strong> (Brahmagupta): algorithms for roots (7th c.).</li>
+              <li><strong>Islamic Golden Age</strong>: formalized extraction methods; influenced Europe.</li>
+              <li><strong>1525</strong> (Rudolff): printed radical sign \(\sqrt{\phantom{a}}\).</li>
+              <li><strong>1637</strong> (Descartes): added the vinculum (bar over the radicand).</li>
+            </ul>
+          </div>
+        </div>
+
+        <details class="card" open>
+          <summary>Main Types of Roots in adicals</summary>
+          
+            <div class="grid">
+              <div class="panel">
+                <h3>Square Roots</h3>
+                <p>\(\sqrt{9}=3\) since \(3^2=9\).</p>
+              </div>
+              <div class="panel">
+                <h3>Cube Roots</h3>
+                <p>\(\sqrt[3]{27}=3\) since \(3^3=27\). Works for negatives: \(\sqrt[3]{-8}=-2\).</p>
+              </div>
+              <div class="panel">
+                <h3>Higher-Order Roots</h3>
+                <p>\(\sqrt[4]{16}=2\) since \(2^4=16\).</p>
+              </div>
+        </details>
+      </section>
+<!-- 5.x Simplifying Radicals -->
+<details id="#chapter4" class="card" open>
+  <summary>Simplifying Radicals</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    To simplify a radical:  
+    1. Factor the radicand into perfect powers and remaining factors.  
+    2. Take the root of the perfect powers.  
+    3. Leave the remaining factors inside the radical.  
+    <br>
+    Example: \(\sqrt{72} = \sqrt{36 \cdot 2} = 6\sqrt{2}\).
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25); color:#fff;">
+      <tr>
+        <th>\(\sqrt{72b^{6}y^{8}}\)</th>
+        <th>\(\sqrt[3]{90x^{9}z^{10}}\)</th>
+        <th>\(\sqrt{u^{15}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:white;">
+        <td>
+          Factor: \(72 = 36 \cdot 2\), so \(\sqrt{72} = \sqrt{36 \cdot 2} = 6\sqrt{2}\).  
+          For \(b^{6}\): \(\sqrt{b^{6}} = b^{3}\) (even exponent).  
+          For \(y^{8}\): \(\sqrt{y^{8}} = y^{4}\).  
+          Combine: \(6b^{3}y^{4}\sqrt{2}\).
+        </td>
+        <td>
+          Factor: \(90 = 27 \cdot 10\), so \(\sqrt[3]{90} = \sqrt[3]{27 \cdot 10} = 3\sqrt[3]{10}\).  
+          For \(x^{9}\): \(\sqrt[3]{x^{9}} = x^{3}\) (exponent divisible by 3).  
+          For \(z^{10}\): split as \(z^{9} \cdot z\), so \(\sqrt[3]{z^{9}} = z^{3}\) and \(z\) remains inside.  
+          Combine: \(3x^{3}z^{3}\sqrt[3]{10z}\).
+        </td>
+        <td>
+          For \(u^{15}\): split as \(u^{14} \cdot u\).  
+          \(\sqrt{u^{14}} = u^{7}\), and \(u\) remains inside.  
+          Final: \(u^{7}\sqrt{u}\).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(6b^{3}y^{4}\sqrt{2}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(3x^{3}z^{3}\sqrt[3]{10z}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(u^{7}\sqrt{u}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+      <!-- LAWS OF RADICALS  -->
+ 
+      <section id="#chapter3" class="card">
+        <h2>Laws of Radicals</h2>
+
+<!-- First Law -->
+<details id="#chapter3" class="card" open>
+  <summary>1) First Law</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \[
+      \sqrt[n]{a^n} =
+      |a| \ \text{if $n$ is even}, \quad
+      a \ \text{if $n$ is odd}
+    \]
+    When the index of the radical and the exponent are the same, they cancel each other.  
+    If the index is even, the result must be non-negative, so we take the absolute value.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Problem: \(\sqrt[3]{18^3}\)</th>
+        <th>Problem: \(\sqrt[4]{64^4}\)</th>
+        <th>Problem: \(\sqrt[5]{3125^5}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Since the index and exponent match (3 and 3), the cube root cancels the cube power. Odd index means no absolute value needed. Result: \(18\).</td>
+        <td>The fourth root cancels the fourth power. Because the index is even, we must write the answer as \(|64|\).</td>
+        <td>Fifth root cancels fifth power. Odd index → no absolute value needed. Result: \(3125\).</td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(18\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(|64|\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(3125\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Second Law -->
+<details class="card" open>
+  <summary>2) Second Law</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    \(\sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b}, \quad a,b \ge 0\).  
+    A radical over a product can be separated into a product of radicals.  
+    <br><br>
+    This means that if you can factor a number into two parts where one is a perfect power, you can simplify the radical by separating it.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>\(\sqrt{96}\)</th>
+        <th>\(\sqrt{225}\)</th>
+        <th>\(\sqrt{600}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Step 1: Factor \(96 = 16 \times 6\).  
+          <br>Step 2: Apply product rule: \(\sqrt{96} = \sqrt{16} \cdot \sqrt{6}\).  
+          <br>Step 3: Simplify \(\sqrt{16} = 4\).  
+          <br>So, \(\sqrt{96} = 4\sqrt{6}\).
+        </td>
+        <td>
+          Step 1: Factor \(225 = 25 \times 9\).  
+          <br>Step 2: Apply product rule: \(\sqrt{225} = \sqrt{25} \cdot \sqrt{9}\).  
+          <br>Step 3: Simplify \(\sqrt{25} = 5\) and \(\sqrt{9} = 3\).  
+          <br>Multiply: \(5 \cdot 3 = 15\).  
+          <br>So, \(\sqrt{225} = 15\).
+        </td>
+        <td>
+          Step 1: Factor \(600 = 100 \times 6\).  
+          <br>Step 2: Apply product rule: \(\sqrt{600} = \sqrt{100} \cdot \sqrt{6}\).  
+          <br>Step 3: Simplify \(\sqrt{100} = 10\).  
+          <br>So, \(\sqrt{600} = 10\sqrt{6}\).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(4\sqrt{6}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(15\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(10\sqrt{6}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+<!-- Third Law -->
+<details class="card" open>
+  <summary>3) Third Law</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \(\sqrt[n]{\tfrac{a}{b}} = \tfrac{\sqrt[n]{a}}{\sqrt[n]{b}}, \quad b \neq 0\).  
+    <br><br>
+    This means that when a fraction is under a radical, you can apply the radical separately to the numerator and the denominator.  
+    After that, simplify both parts and reduce the fraction if possible.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>\(\sqrt{\tfrac{729}{900}}\)</th>
+        <th>\(\sqrt{\tfrac{169}{256}}\)</th>
+        <th>\(\sqrt{\tfrac{289}{400}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Step 1: Split the fraction: \(\sqrt{\tfrac{729}{900}} = \tfrac{\sqrt{729}}{\sqrt{900}}\).  
+          <br>Step 2: Simplify each square root: \(\sqrt{729} = 27\), \(\sqrt{900} = 30\).  
+          <br>Step 3: Put them together: \(\tfrac{27}{30}\).  
+          <br>Step 4: Simplify fraction: \(\tfrac{27}{30} = \tfrac{9}{10}\).
+        </td>
+        <td>
+          Step 1: Split the fraction: \(\sqrt{\tfrac{169}{256}} = \tfrac{\sqrt{169}}{\sqrt{256}}\).  
+          <br>Step 2: Simplify each part: \(\sqrt{169} = 13\), \(\sqrt{256} = 16\).  
+          <br>So, \(\sqrt{\tfrac{169}{256}} = \tfrac{13}{16}\).
+        </td>
+        <td>
+          Step 1: Split the fraction: \(\sqrt{\tfrac{289}{400}} = \tfrac{\sqrt{289}}{\sqrt{400}}\).  
+          <br>Step 2: Simplify each part: \(\sqrt{289} = 17\), \(\sqrt{400} = 20\).  
+          <br>So, \(\sqrt{\tfrac{289}{400}} = \tfrac{17}{20}\).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(\tfrac{9}{10}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(\tfrac{13}{16}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">
+          Final Answer: \(\tfrac{17}{20}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+<!-- Fourth Law -->
+<details class="card" open>
+  <summary>4) Fourth Law</summary>
+
+  <div class="rulebox" style="margin: 10px 0; padding: 10px; background:rgba(125,211,252,.25); border-left: 4px solid rgba(125,211,252,.25);">
+    \[
+      \sqrt[n]{\sqrt[m]{a}} \;=\; \sqrt[m]{\sqrt[n]{a}} \;=\; \sqrt[nm]{a}
+    \]
+    Multiply the indices. You may also
+    <em>switch the order</em> of the roots first and the result will be the same.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>\(\sqrt[3]{\sqrt{4096}}\)</th>
+        <th>\(\sqrt[3]{\sqrt{729}}\) &nbsp; (showing index switch)</th>
+        <th>\(\sqrt{\sqrt[4]{6561}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        <td>
+          <strong>Method A (Multiply Indices):</strong><br>
+          \(\sqrt[3]{\sqrt{4096}} = \sqrt[3\cdot 2]{4096} = \sqrt[6]{4096}\).  
+          Since \(4096 = 2^{12}\), \(\sqrt[6]{4096} = 2^{12/6} = 2^2 = 4\).<br><br>
+          <strong>Method B:</strong><br>
+          \(\sqrt{4096} = 64\), then \(\sqrt[3]{64} = 4\).
+        </td>
+
+
+        <td>
+          <strong>Switch order first:</strong><br>
+          \(\sqrt[3]{\sqrt{729}} \;\;\longrightarrow\;\; \sqrt{\sqrt[3]{729}}\).  
+          Compute inner cube root: \(\sqrt[3]{729} = 9\).  
+          Then square root: \(\sqrt{9} = 3\).<br><br>
+          <strong>Or multiply indices:</strong><br>
+          \(\sqrt[3]{\sqrt{729}} = \sqrt[3\cdot 2]{729} = \sqrt[6]{729}\).  
+          Since \(729 = 3^6\), \(\sqrt[6]{729} = 3\).
+        </td>
+
+
+        <td>
+          <strong>Multiply indices:</strong><br>
+          \(\sqrt{\sqrt[4]{6561}} = \sqrt[2\cdot 4]{6561} = \sqrt[8]{6561} = \sqrt[8]{3^8} = 3\).
+        </td>
+      </tr>
+
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(4\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(3\)</td>
+        <td style="border:3px solid #111; background:#34d399; font-weight:bold; color:#000;">Final Answer: \(3\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<h2>Operations on Radicals</h2>
+<!-- 5.1 Addition -->
+<details id="#chapter5" class="card" open>
+  <summary>Addition of Radicals</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    Like radicals have the <em>same index</em> and the <em>same simplified radicand</em>.  
+    Always simplify first, then add coefficients just like combining like terms in algebra.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25); color:#fff;">
+      <tr>
+        <th>\(3\sqrt{52} + 2\sqrt{117}\)</th>
+        <th>\(4\sqrt{68} + 3\sqrt{153}\)</th>
+        <th>\(6\sqrt{92} + 5\sqrt{207}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:white;">
+        <td>
+          First simplify:  
+          \(\sqrt{52} = 2\sqrt{13}\), so \(3\sqrt{52} = 6\sqrt{13}\).  
+          \(\sqrt{117} = 3\sqrt{13}\), so \(2\sqrt{117} = 6\sqrt{13}\).  
+          Now both are like radicals, so add coefficients: \(6\sqrt{13}+6\sqrt{13}=12\sqrt{13}\).
+        </td>
+        <td>
+          Simplify each term:  
+          \(\sqrt{68} = 2\sqrt{17}\), so \(4\sqrt{68} = 8\sqrt{17}\).  
+          \(\sqrt{153} = 3\sqrt{17}\), so \(3\sqrt{153} = 9\sqrt{17}\).  
+          Add coefficients: \(8\sqrt{17}+9\sqrt{17}=17\sqrt{17}\).
+        </td>
+        <td>
+          Simplify:  
+          \(\sqrt{92} = 2\sqrt{23}\), so \(6\sqrt{92} = 12\sqrt{23}\).  
+          \(\sqrt{207} = 3\sqrt{23}\), so \(5\sqrt{207} = 15\sqrt{23}\).  
+          Add coefficients: \(12\sqrt{23}+15\sqrt{23}=27\sqrt{23}\).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(12\sqrt{13}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(17\sqrt{17}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(27\sqrt{23}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- 5.2 Subtraction -->
+<details class="card" open>
+  <summary>Subtraction of Radicals</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    Simplify each radical first, then subtract coefficients of like radicals.  
+    If the radicands are different, they cannot be combined.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25); color:#fff;">
+      <tr>
+        <th>\(5\sqrt{75} - 2\sqrt{147}\)</th>
+        <th>\(7\sqrt{117} - 3\sqrt{175}\)</th>
+        <th>\(8\sqrt{128} - 5\sqrt{162}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:white;">
+        <td>
+          Simplify:  
+          \(\sqrt{75} = 5\sqrt{3}\), so \(5\sqrt{75} = 25\sqrt{3}\).  
+          \(\sqrt{147} = 7\sqrt{3}\), so \(2\sqrt{147} = 14\sqrt{3}\).  
+          Both have \(\sqrt{3}\), so subtract coefficients: \(25\sqrt{3}-14\sqrt{3}=11\sqrt{3}\).
+        </td>
+        <td>
+          Simplify:  
+          \(\sqrt{117} = 3\sqrt{13}\), so \(7\sqrt{117} = 21\sqrt{13}\).  
+          \(\sqrt{175} = 5\sqrt{7}\), so \(3\sqrt{175} = 15\sqrt{7}\).  
+          Radicands differ (\(\sqrt{13}\) vs \(\sqrt{7}\)), so they cannot be combined.  
+          Expression remains \(21\sqrt{13}-15\sqrt{7}\).
+        </td>
+        <td>
+          Simplify:  
+          \(\sqrt{128} = 8\sqrt{2}\), so \(8\sqrt{128} = 64\sqrt{2}\).  
+          \(\sqrt{162} = 9\sqrt{2}\), so \(5\sqrt{162} = 45\sqrt{2}\).  
+          Subtract coefficients: \(64\sqrt{2}-45\sqrt{2}=19\sqrt{2}\).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(11\sqrt{3}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(21\sqrt{13} - 15\sqrt{7}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(19\sqrt{2}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!--Multiplication -->
+<details class="card" open>
+  <summary>Multiplication of Radicals</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    Multiply the radicands: \(\sqrt{a}\cdot\sqrt{b}=\sqrt{ab}\).  
+    Then simplify if possible.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25); color:#fff;">
+      <tr>
+        <th>\(\sqrt{26}\cdot\sqrt{34}\)</th>
+        <th>\(\sqrt{58}\cdot\sqrt{62}\)</th>
+        <th>\(\sqrt{50}\cdot\sqrt{32}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:white;">
+        <td>
+          Multiply inside: \(26\cdot34=884\).  
+          So \(\sqrt{26}\cdot\sqrt{34}=\sqrt{884}\).  
+          Simplify: \(884=4\cdot221\), so \(\sqrt{884}=2\sqrt{221}\).
+        </td>
+        <td>
+          Multiply: \(58\cdot62=3596\).  
+          So result is \(\sqrt{3596}\).  
+          Simplify: \(3596=4\cdot899\), so \(\sqrt{3596}=2\sqrt{899}\).
+        </td>
+        <td>
+          Multiply: \(50\cdot32=1600\).  
+          \(\sqrt{1600}=40\).  
+          This one simplifies to a whole number.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(2\sqrt{221}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(2\sqrt{899}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(40\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- Division -->
+<details class="card" open>
+  <summary>Division of Radicals</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    \(\sqrt{\tfrac{a}{b}}=\tfrac{\sqrt{a}}{\sqrt{b}}\).  
+    Often it is easier to simplify the fraction <em>before</em> applying the radical.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25); color:#fff;">
+      <tr>
+        <th>\(\sqrt{\tfrac{170}{34}}\)</th>
+        <th>\(\sqrt{\tfrac{198}{22}}\)</th>
+        <th>\(\sqrt{\tfrac{242}{22}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:white;">
+        <td>
+          Simplify fraction first: \(\tfrac{170}{34}=5\).  
+          Then take radical: \(\sqrt{5}\).  
+          Cannot simplify further.
+        </td>
+        <td>
+          Simplify: \(\tfrac{198}{22}=9\).  
+          Then \(\sqrt{9}=3\).  
+          Here the square root is a perfect square.
+        </td>
+        <td>
+          Simplify: \(\tfrac{242}{22}=11\).  
+          Then \(\sqrt{11}\).  
+          Cannot simplify further.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(\sqrt{5}\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(3\)</td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">Final Answer: \(\sqrt{11}\)</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<style>
+  details.card { margin-bottom: 30px; }
+</style>
+<!-- 5.x Rationalizing Radicals -->
+<details class="card" open>
+  <summary>Rationalizing Radicals</summary>
+
+  <div class="rulebox" style="margin:10px 0; padding:10px; background:rgba(125,211,252,.25); border-left:4px solid rgba(125,211,252,.25);">
+    To rationalize a denominator:  
+    \(\displaystyle \frac{a}{\sqrt{b}} = \frac{a}{\sqrt{b}} \cdot \frac{\sqrt{b}}{\sqrt{b}} = \frac{a\sqrt{b}}{b}\).  
+    Multiply numerator and denominator by the radical in the denominator so that the denominator becomes a rational number.
+  </div>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff;">
+    <thead style="background:rgba(125,211,252,.25); color:#fff;">
+      <tr>
+        <th>\(\frac{5}{\sqrt{24}}\)</th>
+        <th>\(\frac{7}{\sqrt{38}}\)</th>
+        <th>\(\frac{9}{\sqrt{51}}\)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="color:white;">
+        <td>
+          Multiply top & bottom by \(\sqrt{24}\):  
+          \(\frac{5}{\sqrt{24}} \cdot \frac{\sqrt{24}}{\sqrt{24}} = \frac{5\sqrt{24}}{24}\).  
+          Simplify \(\sqrt{24} = \sqrt{4\cdot 6} = 2\sqrt{6}\):  
+          \(\frac{5(2\sqrt{6})}{24} = \frac{10\sqrt{6}}{24} = \frac{5\sqrt{6}}{12}\).
+        </td>
+        <td>
+          Multiply by \(\sqrt{38}\):  
+          \(\frac{7}{\sqrt{38}} \cdot \frac{\sqrt{38}}{\sqrt{38}} = \frac{7\sqrt{38}}{38}\).  
+          No further simplification since 38 has no perfect square factors other than 1.
+        </td>
+        <td>
+          Multiply by \(\sqrt{51}\):  
+          \(\frac{9}{\sqrt{51}} \cdot \frac{\sqrt{51}}{\sqrt{51}} = \frac{9\sqrt{51}}{51}\).  
+          Simplify \(\frac{9}{51} = \frac{3}{17}\):  
+          Final simplified form: \(\frac{3\sqrt{51}}{17}\).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(\frac{5\sqrt{6}}{12}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(\frac{7\sqrt{38}}{38}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(\frac{3\sqrt{51}}{17}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+<details class="card">
+  <summary>Radicals in Algebra</summary>
+
+
+  <h4 style="margin-top:20px;">Solving Polynomial Equations</h4>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff; margin:15px 0;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Example 1</th>
+        <th>Example 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Solve \(x^2 - 5 = 0\): <br>
+          \(x^2 = 5 \;\Rightarrow\; x = \pm \sqrt{5}\)
+        </td>
+        <td>
+          Solve \(2x^2 - 8 = 0\): <br>
+          \(x^2 = 4 \;\Rightarrow\; x = \pm 2\)
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(x = \pm \sqrt{5}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(x = \pm 2\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Radicals often appear when solving simple polynomial equations.
+  </p>
+
+  <style>  
+  details.nomargin {
+  margin-bottom: 0;
+  }
+</style
+
+  <!-- 6.2.2 Quadratic Equation -->
+  <h4 style="margin-top:30px;">6.2.2 Quadratic Equations</h4>
+
+  <table border="1" cellpadding="10" cellspacing="0" 
+         style="width:100%; border-collapse:collapse; background:#000; color:#fff; margin:15px 0;">
+    <thead style="background:rgba(125,211,252,.25);">
+      <tr>
+        <th>Example 1</th>
+        <th>Example 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Solve \(x^2 - 4x + 1 = 0\): <br>
+          \(x = \tfrac{4 \pm \sqrt{16 - 4}}{2} = \tfrac{4 \pm \sqrt{12}}{2} = \tfrac{4 \pm 2\sqrt{3}}{2} = 2 \pm \sqrt{3}\)
+        </td>
+        <td>
+          Solve \(3x^2 + 2x - 5 = 0\): <br>
+          \(x = \tfrac{-2 \pm \sqrt{4 + 60}}{6} = \tfrac{-2 \pm \sqrt{64}}{6} = \tfrac{-2 \pm 8}{6}\) <br>
+          So \(x=1 \ \text{or}\; -\tfrac{5}{3}\)
+        </td>
+      </tr>
+      <tr>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(x = 2 \pm \sqrt{3}\)
+        </td>
+        <td style="border:3px solid #111; background:#34d399; color:#000; font-weight:bold;">
+          Final Answer: \(x = 1,\ -\tfrac{5}{3}\)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</details>
+
+
+ 
+      </section>
+      <h2>Reflections</h2>
+      <p id="#reflection">
+      Every expert in mathematics began as a beginner who decided to keep going. Radicals may seem new at first, but with consistent practice, determination, and perseverance, you will understand them and use them confidently.
+      
+      Mistakes are part of life and an essential part of learning. Each one shows you what to work on and helps you grow. They are evidence that you are making progress and developing your skills.
+      
+      With steady effort, what feels challenging today will become something you can do with ease. You will be able to solve problems accurately and approach mathematics with confidence.
+      </p>
+      
+   
+      <!-- GLOSSARY                    -->
+    
+      <section id="#appendices" class="card">
+        <h2>Appendix A — Glossary</h2>
+        <div class="grid">
+          <div class="panel">
+            <p><strong>Radical (\(\sqrt{\;}\))</strong>: Symbol denoting a root.</p>
+            <p><strong>Radicand</strong>: Expression inside the radical.</p>
+            <p><strong>Index</strong>: Root degree (e.g., the “3” in \(\sqrt[3]{\;}\)).</p>
+            <p><strong>Vinculum</strong>: Horizontal bar over the radicand.</p>
+          </div>
+          <div class="panel">
+            <p><strong>Like Radicals</strong>: Same index and same simplified radicand.</p>
+            <p><strong>Rationalizing</strong>: Removing radicals from denominators.</p>
+          </div>
+        </div>
+      </section>
+      <p>
+  <strong>Group 5 Members:</strong><br>
+  Larosa, Jarelle<br>
+  Laxamana, Gabriel<br>
+  Santos, Rizhen<br>
+  Billena, Caira<br>
+  Dungca, Denise<br>
+  Intal, Patience<br>
+  Quiroz, Aicelle
+</p>
+      <!-- REFERENCES                  -->
+      <section id="references></section>" class="card">
+        <h2>References</h2>
+            
+
+            <strong>Exponents</strong><br>
+            Cuemath. (n.d.). <em>Exponents</em>. Cuemath. https://www.cuemath.com/algebra/exponents/<br>
+            Davenport University. (n.d.). <em>Exponents: Definition</em>. Davenport University Library Guides. https://davenport.libguides.com/math-skills-overview/exponents/definition<br>
+            Khan Academy. (n.d.). <em>Radicals and rational exponents</em>. Khan Academy. https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7:advanced-math-easier/x0fcc98a58ba3bea7:radicals-and-rational-exponents-easier/a/v2-sat-lesson-radicals-and-rational-exponents-easier<br><br>
+            
+            <strong>Radicals</strong><br>
+            Cuemath. (n.d.). <em>Radical – Formula, definition, examples</em>. https://www.cuemath.com/radical-formula/<br>
+            Lamar University. (n.d.). <em>Algebra – Radicals</em>. https://tutorial.math.lamar.edu/classes/alg/Radicals.aspx<br>
+            Math is Fun. (n.d.). <em>Radical</em>. https://www.mathsisfun.com/definitions/radical.html<br>
+            Math Open Reference. (n.d.). <em>Radical</em>. https://www.mathopenref.com/radical.html<br>
+            Mathleaks. (n.d.). <em>Applying radical functions to real-world situations</em>. https://mathleaks.com/study/applyingradicalfunctionstoreal-world_situations<br>
+            Purplemath. (n.d.). <em>Radicals</em>. https://www.purplemath.com/modules/radicals.htm<br>
+            Research Outreach. (n.d.). <em>Discovering perfect squares: Building square roots</em>. https://researchoutreach.org/articles/discovering-perfect-squares-building-square-roots/<br>
+            Slideshare. (n.d.). <em>Radicals</em> [PowerPoint slides]. https://www.slideshare.net/slideshow/radicals-239392708/239392708<br>
+            Slideshare. (n.d.). <em>Solving problems involving radicals</em> [PowerPoint slides]. https://www.slideshare.net/slideshow/solving-problems-involving-radicals/244301067<br>
+            Testbook. (n.d.). <em>Radical: Types with general rules and solved examples</em>. https://testbook.com/maths/radical<br>
+            UniversalClass. (n.d.). <em>What are radicals?</em>. https://www.universalclass.com/articles/math/pre-algebra/what-are-radicals.htm<br>
+            University of Florida. (n.d.). <em>Types of radicands</em>. https://xronos.clas.ufl.edu/mac1140nowell/PrecalculusXourse/exploreRadicals/typesOfRadicands<br><br>
+            
+            <strong>🏛 Mathematics History</strong><br>
+            Cantor’s Paradise. (2021, March 14). <em>Tracing the origins of mathematical symbols (π, σ, f(x))</em> [Blog post]. https://www.cantorsparadise.com/tracing-the-origins-of-mathematical-symbols-%CF%80-%CF%83-f-x-16e7868ee2a2<br>
+            ResearchGate. (2017, July 1). <em>Historia matheseos: Early development stage history of mathematics historiography</em>. https://www.researchgate.net/publication/318258750HistoriamatheseosEarlydevelopmentstagehistoryofmathematics
+            _historiography<br>
+            ResearchGate. (2023, May 5). <em>A history of mathematics: From ancient origins to the modern era</em>. https://www.researchgate.net/publication/370607773AHistoryofMathematicsFromAncientOriginstotheModern_Era<br>
+            YouTube. (2017, June 28). <em>Historia matheseos: Early development stage history of mathematics historiography</em> [Video]. https://www.youtube.com/watch?v=DJzJgD-6f-c<br><br>
+            
+            <strong>General Mathematics</strong><br>
+            BCcampus Open Textbooks. (n.d.). <em>Introduction to real numbers</em>. In <em>Business mathematics</em>. https://opentextbc.ca/businesstechnicalmath/chapter/introduction-to-real-numbers/
+            </p>
+      </section>
+  
+
+      <p class="footer"> Ubiquitous Radicals</p>
+    </main>
+  </div>
+</body>
+  <script>
+  
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id && id.length>1){
+          const el=document.querySelector(id);
+          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+        }
+      });
+    });
+
+
+    const sidebar=document.querySelector('.sidebar');
+    const clampSidebar = ()=>{ sidebar.style.maxHeight = (window.innerHeight - 32) + 'px'; };
+    window.addEventListener('resize', clampSidebar);
+    clampSidebar();
+  </script>
+</body>
+</html>
